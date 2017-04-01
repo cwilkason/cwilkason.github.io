@@ -25,6 +25,9 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
+
+<link rel="stylesheet" href="/path/to/leaflet.css" />
+<script src="/path/to/leaflet.js"></script> <!-- or use leaflet-src.js --!>
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
