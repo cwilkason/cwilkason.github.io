@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-  <title>Macha Malaria Transmission</title>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  <style>
-    #map{ width: 900px; height: 500px; }
-  </style>
-</head>
-<body>
+	<head>
+		<title>Macha Malaria Transmission</title>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<style>
+   			#map{ width: 900px; height: 500px; }
+		</style>
+	</head>
 
-  <nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
+<body>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
 	        	<li><a href="/about">About</a></li>
     		</ul>
 	</nav>
-  
-		<div class="container">
-    		<div class="blurb">
+  	<div class="container">
+		<div class="blurb">
         		<h1>Malaria Transmission in Macha</h1>
-				<p>This website will house malaria research. Read more about the project here.</p>
+			<p>This website will house malaria research. Read more about the project here.</p>
     		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-  
-  
-  <div id="map"></div>
+	</div><!-- /.container -->
+	
+	<div id="map"></div>
+		<script>
+			// initialize the map
+			var map = L.map('map').setView([-16.23, 26.46], 13);
+			// load a tile layer
+			L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+			{
+				attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+				maxZoom: 17,
+				minZoom: 9
+			}).addTo(map);
 
-  <script>
-
-  // initialize the map
-  var map = L.map('map').setView([-16.23, 26.46], 13);
-
-  // load a tile layer
-  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
-    {
-      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-      maxZoom: 17,
-      minZoom: 9
-    }).addTo(map);
-
-  </script>
+		</script>
 </body>
 </html>
