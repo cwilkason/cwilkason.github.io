@@ -4,9 +4,9 @@
 		<title>JHSPH malaria research</title>
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"> </script>
-			<div id="mapid"> </div>
-		<var mymap = :.map('mapid').setView([51.505, -0.09],13) />
-		     
+		<style>
+			#map{ height: 100% }
+		</style>		     
 	</head>
 	<body>
 		<nav>
@@ -25,6 +25,18 @@
 			
 			</div><!-- /.blurb -->
 		</div><!-- /.container -->
+		<div id="map"></div>
+		
+		<script>
+			var map =Lmap('map').setView([42.35, -71.08], 13);
+			L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png'
+				    }
+				    attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>
+				    maxZoom: 17,
+				    minZoom: 9
+				    }).addto(map);
+		</script>
+		
 		<footer>
     		<ul>
         		<li><a href="mailto:cwilkas1@jhu.edu">email</a></li>
