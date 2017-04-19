@@ -64,7 +64,8 @@
 			// load a tile layer
 		var layer = L.esri.basemapLayer('Topographic').addTo(map);
 		var layerLabels;
-		
+		var marker = L.marker([-16.43, 26.78]).addTo(mymap);
+
 		function setBasemap(basemap) {
 			if (layer) {
 				map.removeLayer(layer);
@@ -89,7 +90,6 @@
 			var basemap = basemaps.value;
 			setBasemap(basemap);
 		}
-		var marker = L.marker([-16.43, 26.78]).addTo(mymap);
 		</script>
 </body>
 </html>
