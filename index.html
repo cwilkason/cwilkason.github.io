@@ -4,7 +4,6 @@
 	<head>
 		<title>Macha Malaria Transmission</title>
 		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'>
-
 		<!-- Load leaflet from CDN -->
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
 		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
@@ -49,18 +48,12 @@
 	<div id="basemaps-wrapper" class="leaflet-bar">	
 		<select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">	
 			<option value="Topographic">Topographic</option>
-   	 		<option value="Streets">Streets</option>
-   			 <option value="NationalGeographic">National Geographic</option>
-   			 <option value="Oceans">Oceans</option>
-   			 <option value="Gray">Gray</option>
-   			 <option value="DarkGray">Dark Gray</option>
-    			<option value="Imagery">Imagery</option>
-    			<option value="ShadedRelief">Shaded Relief</option>
  		 </select>	
 	</div>
 	<script>
 		// initialize the map
 		var map = L.map('map').setView([-16.43, 26.78], 10);
+		var marker=L.marker([26.45,-15.75]).addTo(map);
 		
 		
     			}
