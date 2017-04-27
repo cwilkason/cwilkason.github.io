@@ -61,29 +61,8 @@
 	<script>
 		// initialize the map
 		var map = L.map('map').setView([-16.43, 26.78], 10);
-			// load a tile layer
-		var layer = L.esri.basemapLayer('Topographic').addTo(map);
-		var layerLabels;
-		var marker = L.marker([-16.43, 26.78]).addTo(mymap);
-
-		function setBasemap(basemap) {
-			if (layer) {
-				map.removeLayer(layer);
-			}
-			layer = L.esri.basemapLaer(basemap);
-			map.addLayer(layer);
-    			if (layerLabels) {
-     				map.removeLayer(layerLabels);
-    					}
-    			if (basemap === 'ShadedRelief'
-    			 || basemap === 'Oceans'
-    			 || basemap === 'Gray'
-    			 || basemap === 'DarkGray'
-    			 || basemap === 'Imagery'
-    			 || basemap === 'Terrain'
-  			 ) {
-     			 layerLabels = L.esri.basemapLayer(basemap + 'Labels');
-    			  map.addLayer(layerLabels);
+		
+		
     			}
  		 }
 		function changeBasemap(basemaps) {
